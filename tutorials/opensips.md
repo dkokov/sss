@@ -22,5 +22,6 @@ The Load Balancing will be into several FreeSWITCHes.
 
 ## Links
 
-* [OpenSIPS project web page](https://opensips.org/)
+* [fail2ban](https://github.com/fail2ban/fail2ban)
+* [OpenSIPS](https://opensips.org/)
 * [VLAD PAIU,OpenSIPS,Securing SIP Networks](https://opensips.org/pub/events/2012-08-07_ClueCon_Chicago/VLAD_PAIU-OpenSIPS-Securing_SIP_Networks.pdf)
