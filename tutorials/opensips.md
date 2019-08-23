@@ -27,7 +27,7 @@ Test cases are release with **OpenSIPS** _version 2.4.5_ and **FreeSWITCH** _ver
 
 ## Features
 
-* Malformed packets
+* [Malformed packets](#malformed-packets)
 * Loop protections
 * Check 'UA'
 * Check 'From' URI
@@ -37,9 +37,11 @@ Test cases are release with **OpenSIPS** _version 2.4.5_ and **FreeSWITCH** _ver
 * INVITE prevent
 * REGISTER prevent
 
-* 'fail2ban' using
+* fail2ban using
+* compression and logrotate a opensips log
 
-### Malformed packets (according to SIP RFC3261)
+### Malformed packets 
+(according to SIP RFC3261)
 
 For this task,you can be used a follow OpenSIPS's function:
 
@@ -173,6 +175,8 @@ route[no_auth_counter]
 
 ## Links
 
-* [fail2ban](https://github.com/fail2ban/fail2ban)
 * [OpenSIPS](https://opensips.org/)
 * [VLAD PAIU,OpenSIPS,Securing SIP Networks](https://opensips.org/pub/events/2012-08-07_ClueCon_Chicago/VLAD_PAIU-OpenSIPS-Securing_SIP_Networks.pdf)
+* [fail2ban](https://github.com/fail2ban/fail2ban)
+
+
