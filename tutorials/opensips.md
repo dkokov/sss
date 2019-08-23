@@ -25,7 +25,7 @@ The FreeSWITCH keeps my media streams and release my voice services.
 
 ## OpenSIPS config (opensips.cfg)
 
-``` bash
+``` javascript
 # Thread protection - Malformed packets (according to SIP RFC3261)
 if(!sipmsg_validate()) {
     $var(ret) = $retcode;
