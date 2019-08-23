@@ -38,4 +38,4 @@ This my personal e-mail: dkokov75 at gmail dot com
 
 ## Links
 
-* [RFC3261](https://www.rfc-editor.org/rfc/rfc3261.html)
+* [SIP specification/RFC3261](https://www.rfc-editor.org/rfc/rfc3261.html)
