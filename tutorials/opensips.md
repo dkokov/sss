@@ -1,7 +1,6 @@
 # OpenSIPS security tutorial
 
 * [Introduction](#Introduction)
-
 * [Links](#Links)
 
 ## Introduction
@@ -25,7 +24,7 @@ The FreeSWITCH keeps my media streams and release my voice services.
 
 ## OpenSIPS config (opensips.cfg)
 
-``` javascript
+``` php
 # Thread protection - Malformed packets (according to SIP RFC3261)
 if(!sipmsg_validate()) {
     $var(ret) = $retcode;
