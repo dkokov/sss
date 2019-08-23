@@ -24,12 +24,14 @@ The FreeSWITCH keeps my media streams and release my voice services.
 
 Test cases are release with **OpenSIPS** _version 2.4.5_ and **FreeSWITCH** _version 1.6.20_
 
-## OpenSIPS config (opensips.cfg)
+
+## Thread protection - Malformed packets (according to SIP RFC3261)
+
+For this task,you can be used a follow OpenSIPS's function:
 
 * [sipmsg_validate()](https://opensips.org/html/docs/modules/2.4.x/sipmsgops.html#func_sipmsg_validate)
 
 ``` php
-# Thread protection - Malformed packets (according to SIP RFC3261)
 if(!sipmsg_validate()) {
     $var(ret) = $retcode;
     xlog("L_WARN","$ci|log|Bad Request/Body from $si $rm ($fu),retcode=$var(ret)");
@@ -42,6 +44,23 @@ if(!sipmsg_validate()) {
     exit;
 }
 ```
+
+When a '$retcode = -2',opensips cannot return response message.
+Therefore in this case has 'drop;'.
+
+You can test this case with follow command:
+
+``` php
+./sss.php 
+
+```
+
+There is a result in the OpenSIPS:
+
+``` bash
+
+```
+
 
 ## Links
 
