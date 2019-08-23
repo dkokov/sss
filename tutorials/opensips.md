@@ -27,11 +27,17 @@ Test cases are release with **OpenSIPS** _version 2.4.5_ and **FreeSWITCH** _ver
 
 ## Features
 
-* Malformed packets (according to SIP RFC3261)
+* Malformed packets
 * Loop protections
 * Check 'UA'
 * Check 'From' URI
 * Check 'To' URI
+* Counter 'no auth'
+* Check REGITRATION
+* INVITE prevent
+* REGISTER prevent
+
+* 'fail2ban' using
 
 ### Malformed packets (according to SIP RFC3261)
 
@@ -108,9 +114,17 @@ For this task,you can be used a follow OpenSIPS's function:
 
 ### Check UA
 
+Can be written in '**route[chk_ua]**'.
+
+
 ### Check 'From' URI
 
+Can be written in '**route[chk_from_uri]**'.
+
 ### Check 'To' URI
+
+Can be written in '**route[chk_to_uri]**'.
+
 
 ### List from unavailable SIP messages 
 
@@ -124,6 +138,38 @@ Maybe would like to stop 'OPTIONS' or "MESSAGE" again.
         exit;
     }
 ```
+
+### Counter 'no auth'
+
+attempts
+
+``` php
+route[no_auth_counter]
+{
+    if(cache_fetch("redis:group1","authF_$fU",$avp(failed_no))) {
+        if($(avp(failed_no){s.int}) > 6) {
+            return($(avp(failed_no){s.int}));
+        } else {
+            if($param(1)==1) $avp(failed_no_curr) = $(avp(failed_no){s.int}) + 1;
+            else $avp(failed_no_curr) = $(avp(failed_no){s.int});
+        }
+    } else {
+        $avp(failed_no_curr) = 0;
+    }
+
+    if($var(d)) xlog("L_INFO","$ci|debug(no_auth_counter($param(1)))|src_ip: $si,authF: $fU,counter: $avp(failed_no_curr)");
+    if($param(1)==1) cache_store("redis:group1","authF_$fU","$avp(failed_no_curr)",300);
+
+    return(-1);
+}
+```
+
+### INVITE prevent
+
+### REGISTER prevent
+
+### 'fail2ban' using
+
 
 ## Links
 
