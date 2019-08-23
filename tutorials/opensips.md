@@ -22,6 +22,8 @@ So...I'm using the OpenSIPS as Load Balancer with SBC functionality.
 The Load Balancing will be into several FreeSWITCHes.
 The FreeSWITCH keeps my media streams and release my voice services.
 
+Test cases are release with **OpenSIPS** _version 2.4.5_ and **FreeSWITCH** _version 1.6.20_
+
 ## OpenSIPS config (opensips.cfg)
 
 ``` php
