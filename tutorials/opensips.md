@@ -2,6 +2,8 @@
 
 * [Introduction](#Introduction)
 
+* [Links](#Links)
+
 ## Introduction
 
 **"OpenSIPS is a multi-functional, multi-purpose signaling SIP server used by carriers, 
@@ -16,6 +18,9 @@ Realy this server can do a lot :-)
 I'm going to ... - OpenSIPS as Load Balancer with SBC functionality.
 The Load Balancing will be into several FreeSWITCHes.
 
+## 
+
 ## Links
 
 * [OpenSIPS project web page](https://opensips.org/)
+* [VLAD PAIU,OpenSIPS,Securing SIP Networks](https://opensips.org/pub/events/2012-08-07_ClueCon_Chicago/VLAD_PAIU-OpenSIPS-Securing_SIP_Networks.pdf)
