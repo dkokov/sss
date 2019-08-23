@@ -1,6 +1,9 @@
 # OpenSIPS security tutorial
 
 * [Introduction](#Introduction)
+
+* [Features]($Features)
+
 * [Links](#Links)
 
 ## Introduction
@@ -18,14 +21,15 @@ I was in Chicago on ClueCon2012 and I included in OpenSIPS traing then.
 I have seen VLAD's presentation by a conference.
 It was my first OpenSIPS security release :-).
 
-So...I'm using the OpenSIPS as Load Balancer with SBC functionality.
+Let's go to see follow topology: The OpenSIPS as Load Balancer with SBC functionality.
 The Load Balancing will be into several FreeSWITCHes.
-The FreeSWITCH keeps my media streams and release my voice services.
+The FreeSWITCH keeps media streams and release voice services.
 
 Test cases are release with **OpenSIPS** _version 2.4.5_ and **FreeSWITCH** _version 1.6.20_
 
+## Features
 
-## Thread protection - Malformed packets (according to SIP RFC3261)
+### Thread protection - Malformed packets (according to SIP RFC3261)
 
 For this task,you can be used a follow OpenSIPS's function:
 
