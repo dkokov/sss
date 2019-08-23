@@ -1,12 +1,12 @@
 # SIP SECURITY SUITE (sss)
 
   The SIP SECURITY SUITE is a collection from php scripts as console testing tools,
-scripts documentation,short description into some secirity topics,tutorials,
+scripts documentation,short description into some security topics,tutorials,
 links to other projects.
 
 * [Introduction](#Indroduction)
 
-* [Security Topics](#Security_Topics)
+* [Topics](#Topics)
 
 * [Tools](#Tools)
 
@@ -16,12 +16,12 @@ links to other projects.
 
 ## Introduction
 
-SIP security tests - different attacks .... malformed message,flooding,overload
+  Have a lot of books and publications in journals for VoIP security.
+But while you don't try some test case with some tool,cannot learn nothing.
+I don't know whether this suite will be useful for somebody,but it's useful for me.
+If you read these sentenses,I'm glad._**Thank you very much!**_
 
-Registration
-Init a call /send INVITE/
-
-## Security_Topics
+## Topics
 
 * [Username Enumeration](topics/enum.md)
 
@@ -54,6 +54,7 @@ This my personal e-mail: dkokov75 at gmail dot com
 ## Links
 
 * [SIP - RFC3261](https://tools.ietf.org/html/rfc3261)
+* "HACKING VoIP",HIMANSHU DWIVEDI
 * [Hacking Exposed VoIP,tools](http://www.hackingvoip.com/sec_tools.html)
 * [VoIP - Vulnerabilities and Attacks](https://www.slideshare.net/null0x00/voip-vulnerabilities-and-attacks)
 * [SIPVicious Blog](http://blog.sipvicious.org/)
