@@ -1,9 +1,7 @@
 # OpenSIPS security tutorial
 
 * [Introduction](#Introduction)
-
-* [Features]($Features)
-
+* [Features](#Features)
 * [Links](#Links)
 
 ## Introduction
@@ -15,9 +13,9 @@ Application Servers, Front-End Load Balancers, IMS Platforms, Call Centers, and 
 
 It's the first sentense by OpenSIPS project web page.
 
-Realy this server can do a lot :-)
+Really this server can do a lot :-)
 My expirence with OpenSIPS is starting before seven years.
-I was in Chicago on ClueCon2012 and I included in OpenSIPS traing then.
+I was in Chicago on ClueCon2012.I have included in OpenSIPS traing then.
 I have seen VLAD's presentation by a conference.
 It was my first OpenSIPS security release :-).
 
@@ -54,7 +52,7 @@ Therefore in this case has 'drop;'.
 
 You can test this case with follow command:
 
-``` php
+``` bash
 ./sss.php 
 
 ```
@@ -62,6 +60,28 @@ You can test this case with follow command:
 There is a result in the OpenSIPS:
 
 ``` bash
+
+```
+
+### Loop protection 1
+
+``` php
+    if(!mf_process_maxfwd_header("10")) {
+        sl_send_reply("483","Too Many Hops");
+        xlog("L_WARN","$ci|end|Too Many Hops ($fu)");
+        exit;
+    }
+```
+
+
+### Loop protection 2
+
+``` php
+    # Loop protection 2 ????
+#    if(is_myself("$rd", "$rp")) {
+#       xlog("L_WARN","$ci|end|sourced from this server $rd:$rp");
+#       exit;
+#    }
 
 ```
 
