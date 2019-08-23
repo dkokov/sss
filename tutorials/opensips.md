@@ -27,7 +27,13 @@ Test cases are release with **OpenSIPS** _version 2.4.5_ and **FreeSWITCH** _ver
 
 ## Features
 
-### Thread protection - Malformed packets (according to SIP RFC3261)
+* Malformed packets (according to SIP RFC3261)
+* Loop protections
+* Check 'UA'
+* Check 'From' URI
+* Check 'To' URI
+
+### Malformed packets (according to SIP RFC3261)
 
 For this task,you can be used a follow OpenSIPS's function:
 
@@ -65,12 +71,27 @@ There is a result in the OpenSIPS:
 
 ### Loop protection 1
 
+For this task,you can be used a follow OpenSIPS's function:
+
+* [is_maxfwd_lt()](https://opensips.org/html/docs/modules/2.4.x/maxfwd.html#func_is_maxfwd_lt)
+
+
 ``` php
-    if(!mf_process_maxfwd_header("10")) {
+???
+    if(!mf_process_maxfwd_header("10")&& $retcode==-1) {
         sl_send_reply("483","Too Many Hops");
         xlog("L_WARN","$ci|end|Too Many Hops ($fu)");
         exit;
     }
+
+???
+    # next hope is a gateway, so make no sens to
+    # forward if MF is 0 (after decrement)
+    if(is_maxfwd_lt("1")) {
+	sl_send_reply("483","Too Many Hops");
+	exit;
+    };
+
 ```
 
 
@@ -85,6 +106,24 @@ There is a result in the OpenSIPS:
 
 ```
 
+### Check UA
+
+### Check 'From' URI
+
+### Check 'To' URI
+
+### List from unavailable SIP messages 
+
+If you want to stop some messages,shold used a function 'is_method()' for to recognize the same _**METHOD**_.
+After that to return "**Service Unavailable**" response for example.
+Maybe would like to stop 'OPTIONS' or "MESSAGE" again.
+
+``` php
+    if(is_method("PUBLISH|SUBSCRIBE")) {
+        sl_send_reply("503","Service Unavailable");
+        exit;
+    }
+```
 
 ## Links
 
