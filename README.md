@@ -50,3 +50,6 @@ This my personal e-mail: dkokov75 at gmail dot com
 ## Links
 
 * [SIP - RFC3261](https://tools.ietf.org/html/rfc3261)
+* [Hacking Exposed VoIP,tools](http://www.hackingvoip.com/sec_tools.html)
+* [VoIP - Vulnerabilities and Attacks](https://www.slideshare.net/null0x00/voip-vulnerabilities-and-attacks)
+* [SIPVicious Blog](http://blog.sipvicious.org/)
