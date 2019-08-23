@@ -21,4 +21,4 @@ Init a call /send INVITE/
 
 ## Links
 
-* [RFC3261](https://www.rfc-editor.org/rfc/rfc3261.html)
+![RFC3261](https://www.rfc-editor.org/rfc/rfc3261.html)
