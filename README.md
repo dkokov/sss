@@ -1,12 +1,12 @@
-# SIP SEC SUITE (sss)
+# SIP SECURITY SUITE (sss)
 
-  The SIP SEC SUITE is a collection from php scripts as console testing tools,
-short description into some secirity topics,documentation into scripts,tutorials,
+  The SIP SECURITY SUITE is a collection from php scripts as console testing tools,
+scripts documentation,short description into some secirity topics,tutorials,
 links to other projects.
 
 * [Introduction](#Indroduction)
 
-* [Security Goals](#Security Topics)
+* [Security Topics](#Security_Topics)
 
 * [Tools](#Tools)
 
@@ -21,13 +21,17 @@ SIP security tests - different attacks .... malformed message,flooding,overload
 Registration
 Init a call /send INVITE/
 
-## Security Topics
+## Security_Topics
+
+* [Username Enumeration](topics/enum.md)
+
+* [Password Retrieval](topics/pass.md)
 
 * [Flooding Attacks](topics/flood.md)
 
 * [Message Flow Attacks](topics/flow.md)
 
-* [Parser Attacks](topics/parser.md)
+* [Parser Attacks,Fuzzing](topics/parser.md)
 
 ## Tools
 
