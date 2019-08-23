@@ -18,4 +18,11 @@ Can be started as bash script(have to execute 'chmod u+x sss.php' before).
 
 In this script has some included test cases,but you can be created your own test case.
 
+## Include SIP REGISTER test cases
+
+* [SIP REGISTER erase]()
+* [SIP REGISTER fault]()
+* [SIP REGISTER fuzer]()
+
+## Copy-Paste SIP message
 
