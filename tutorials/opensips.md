@@ -5,10 +5,10 @@
 
 ## Introduction
 
-**"OpenSIPS is a multi-functional, multi-purpose signaling SIP server used by carriers, 
+_**"OpenSIPS is a multi-functional, multi-purpose signaling SIP server used by carriers, 
 telecoms or ITSPs for solutions like Class4/5 Residential Platforms, 
 Trunking / Wholesale, Enterprise / Virtual PBX Solutions, Session Border Controllers, 
-Application Servers, Front-End Load Balancers, IMS Platforms, Call Centers, and many others."**
+Application Servers, Front-End Load Balancers, IMS Platforms, Call Centers, and many others."**_
 
 It's the first sentense by OpenSIPS project web page.
 
@@ -25,6 +25,8 @@ The FreeSWITCH keeps my media streams and release my voice services.
 Test cases are release with **OpenSIPS** _version 2.4.5_ and **FreeSWITCH** _version 1.6.20_
 
 ## OpenSIPS config (opensips.cfg)
+
+* [sipmsg_validate()](https://opensips.org/html/docs/modules/2.4.x/sipmsgops.html#func_sipmsg_validate)
 
 ``` php
 # Thread protection - Malformed packets (according to SIP RFC3261)
