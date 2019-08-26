@@ -39,6 +39,7 @@ If you read these sentenses,I'm glad._**Thank you very much!**_
 
 ## Tutorials
 
+* [Netfilter/iptables tutorial](tutorials/netfilter.md)
 * [OpenSIPS security tutorial](tutorials/opensips.md)
 
 
@@ -54,7 +55,7 @@ this my personal e-mail address: dkokov75 at gmail dot com
 
 * [SIP - RFC3261](https://tools.ietf.org/html/rfc3261)
 * "HACKING VoIP",HIMANSHU DWIVEDI
-* SNOCER - A SIP Attack Detection / Prevention Architecture
-* [Hacking Exposed VoIP,tools](http://www.hackingvoip.com/sec_tools.html)
+* "SNOCER - A SIP Attack Detection / Prevention Architecture"
+* [Hacking Exposed VoIP, tools](http://www.hackingvoip.com/sec_tools.html)
 * [VoIP - Vulnerabilities and Attacks](https://www.slideshare.net/null0x00/voip-vulnerabilities-and-attacks)
 * [SIPVicious Blog](http://blog.sipvicious.org/)
