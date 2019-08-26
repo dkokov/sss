@@ -23,6 +23,8 @@ A variant for simple protection with NETFILTER/IPTABLES:
 -N sip_reject
 
 
+-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
 -A INPUT -p udp -m recent --name SIP --rcheck --seconds 60 --dport 5060 -j sip_reject
 -A INPUT -p udp --dport 5060 -j sip
 
