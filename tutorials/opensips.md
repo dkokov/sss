@@ -28,22 +28,22 @@ Test cases are release with **OpenSIPS** _version 2.4.5_ and **FreeSWITCH** _ver
 ## Features
 
 * [Malformed packets](#malformed-packets)
-* Loop protections
-* Check 'UA'
-* Check 'From' URI
-* Check 'To' URI
-* Counter 'no auth'
-* Check REGITRATION
-* INVITE prevent
-* REGISTER prevent
+* [Loop protections](#loop-protections)
+* [Check 'UA'](#check-'UA')
+* [Check 'From' URI](#check-from-uri)
+* [Check 'To' URI](#check-to-uri)
+* [List from unavailable SIP messages](list-from-unavailable-sip-messages) 
+* [Counter 'no auth'](#check-no-auth)
+* [Check REGITRATION](#check-registration)
+* [INVITE prevent](#invite-prevent)
+* [REGISTER prevent](#register-prevent)
 
-* fail2ban using
-* compression and logrotate a opensips log
+* [fail2ban using](#fail2ban-using)
+* [compression and logrotate a opensips log](#compression and logrotate a opensips log)
 
 ### Malformed packets 
-(according to SIP RFC3261)
 
-For this task,you can be used a follow OpenSIPS's function:
+For this task,you can be used a follow OpenSIPS's function (according to SIP RFC3261):
 
 * [sipmsg_validate()](https://opensips.org/html/docs/modules/2.4.x/sipmsgops.html#func_sipmsg_validate)
 
@@ -77,7 +77,7 @@ There is a result in the OpenSIPS:
 
 ```
 
-### Loop protection 1
+### Loop protections
 
 For this task,you can be used a follow OpenSIPS's function:
 
@@ -102,8 +102,6 @@ For this task,you can be used a follow OpenSIPS's function:
 
 ```
 
-
-### Loop protection 2
 
 ``` php
     # Loop protection 2 ????
@@ -143,7 +141,12 @@ Maybe would like to stop 'OPTIONS' or "MESSAGE" again.
 
 ### Counter 'no auth'
 
-attempts
+If you would like to count attempts...
+The idea for this 'route' is gotten by VLAS's presentation.
+For to use in different places in the config script,
+you can be eritten as route
+
+There is a same route:
 
 ``` php
 route[no_auth_counter]
@@ -172,6 +175,7 @@ route[no_auth_counter]
 
 ### 'fail2ban' using
 
+### compression and logrotate a opensips log
 
 ## Links
 
