@@ -29,7 +29,7 @@ Test cases are release with **OpenSIPS** _version 2.4.5_ and **FreeSWITCH** _ver
 
 * [Malformed packets](#malformed-packets)
 * [Loop protections](#loop-protections)
-* [Check 'UA'](#check-'UA')
+* [Check 'UA'](#check-ua)
 * [Check 'From' URI](#check-from-uri)
 * [Check 'To' URI](#check-to-uri)
 * [List from unavailable SIP messages](list-from-unavailable-sip-messages) 
@@ -39,7 +39,7 @@ Test cases are release with **OpenSIPS** _version 2.4.5_ and **FreeSWITCH** _ver
 * [REGISTER prevent](#register-prevent)
 
 * [fail2ban using](#fail2ban-using)
-* [compression and logrotate a opensips log](#compression and logrotate a opensips log)
+* [compression and logrotate a opensips log](#compression-and-logrotate-a-opensips-log)
 
 ### Malformed packets 
 
