@@ -2,7 +2,7 @@
 
   The SIP SECURITY SUITE is a collection from php scripts as console testing tools,
 scripts documentation,short description into some security topics,tutorials,
-links to other projects,publications in journals and books.
+links to other projects/publications/books.
 
 * [Introduction](#Indroduction)
 
