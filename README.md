@@ -5,13 +5,9 @@ scripts documentation,short description into some security topics,tutorials,
 links to other projects/publications/books.
 
 * [Introduction](#Indroduction)
-
 * [Topics](#Topics)
-
 * [Tools](#Tools)
-
 * [Tutorials](#Tutorials)
-
 * [Links](#Links)
 
 ## Introduction
@@ -24,24 +20,23 @@ If you read these sentenses,I'm glad._**Thank you very much!**_
 ## Topics
 
 * [Username Enumeration](topics/enum.md)
-
 * [Password Retrieval](topics/pass.md)
-
 * [Flooding Attacks](topics/flood.md)
-
 * [Message Flow Attacks](topics/flow.md)
-
 * [Parser Attacks,Fuzzing](topics/parser.md)
 
 ## Tools
 
+There are links to own tools - written for me.
+
 * [PHP SSS tools](man/tools.md)
+
+For other external tools,see in '**Links**' part by every page.
 
 ## Tutorials
 
 * [Netfilter/iptables tutorial](tutorials/netfilter.md)
 * [OpenSIPS security tutorial](tutorials/opensips.md)
-
 
 ## Feedback
 
@@ -58,4 +53,3 @@ this my personal e-mail address: dkokov75 at gmail dot com
 * "SNOCER - A SIP Attack Detection / Prevention Architecture"
 * [Hacking Exposed VoIP, tools](http://www.hackingvoip.com/sec_tools.html)
 * [VoIP - Vulnerabilities and Attacks](https://www.slideshare.net/null0x00/voip-vulnerabilities-and-attacks)
-* [SIPVicious Blog](http://blog.sipvicious.org/)
