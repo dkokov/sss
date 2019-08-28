@@ -21,7 +21,8 @@ It was my first OpenSIPS security release :-).
 
 Let's go to see follow topology: The OpenSIPS as Load Balancer with SBC functionality.
 The Load Balancing will be into several FreeSWITCHes.
-The FreeSWITCH keeps media streams and release voice services.
+The FreeSWITCH keeps media streams and release voice services,also same SIP registrations.
+The registrations are only passing along a OpenSIPS.
 
 Test cases are release with **OpenSIPS** _version 2.4.5_ and **FreeSWITCH** _version 1.6.20_
 
@@ -33,8 +34,8 @@ Test cases are release with **OpenSIPS** _version 2.4.5_ and **FreeSWITCH** _ver
 * [Check 'From' URI](#check-from-uri)
 * [Check 'To' URI](#check-to-uri)
 * [List from unavailable SIP messages](list-from-unavailable-sip-messages) 
-* [Counter 'no auth'](#check-no-auth)
-* [Check REGITRATION](#check-registration)
+* [Counter 'no auth'](#counter-no-auth)
+* [Check REGISTRATION](#check-registration)
 * [INVITE prevent](#invite-prevent)
 * [REGISTER prevent](#register-prevent)
 
@@ -148,7 +149,7 @@ you can be eritten as route
 
 There is a same route:
 
-``` php
+``` opensips
 route[no_auth_counter]
 {
     if(cache_fetch("redis:group1","authF_$fU",$avp(failed_no))) {
@@ -174,6 +175,32 @@ route[no_auth_counter]
 ### REGISTER prevent
 
 ### 'fail2ban' using
+
+  Very importment is to use '**fail2ban**' because all prevention mechanisms here,will write in log key word 'reject'.
+Something have to get this key word and start droping for this ip address. There will stop attacks !
+You can be used '**fail2ban**' for this task.
+
+For to work '**OpenSIPS**' and '**fail2ban**' together,in the '**opensips.cfg**' have to use follow conteption:
+
+``` opensips
+xlog("L_INFO", "$ci|reject|src_ip=[$si],...your message description...");
+```
+
+The follow message will be write in the opensips log file:
+``` bash
+1118856626301574502321685|reject|src_ip=[192.168.108.180],... your message description ...
+```
+
+For to be catch message from the '**fail2ban**',should be create a filter config file for opensips.
+Maybe '**/etc/fail2ban/filter.d/opensips.conf**' for example.After that to define pattern for the catching:
+
+``` bash
+[Definition]
+
+failregex = \|reject\|src_ip=\[<HOST>\]
+```
+
+There is a syntax for '**fail2ban**' rule.
 
 ### compression and logrotate a opensips log
 
