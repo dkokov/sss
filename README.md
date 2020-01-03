@@ -32,9 +32,9 @@ If you read these sentenses,I'm glad._**Thank you very much!**_
 
 There are links to my own tools.
 
-* [PHP SSS tools](man/tools.md)
+* <!--[PHP SSS tools](man/tools.md)--> ... soon ...
 
-For other external tools,see in '**Links**' part by every page.
+<!--For other external tools,see in '**Links**' part by every page.-->
 
 ## Tutorials
 
