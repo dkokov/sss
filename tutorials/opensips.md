@@ -13,11 +13,11 @@ Application Servers, Front-End Load Balancers, IMS Platforms, Call Centers, and 
 
 It's the first sentense by OpenSIPS project web page.
 
-Really this server can do a lot :-)
+Really this server can do a lot.
 My expirence with OpenSIPS is starting before seven years.
 I was in Chicago on ClueCon2012.I have included in OpenSIPS traing then.
 I have seen VLAD's presentation by a conference.
-It was my first OpenSIPS security release :-).
+It was my first OpenSIPS security release.
 
 Let's go to see follow topology: The OpenSIPS as Load Balancer with SBC functionality.
 The Load Balancing will be into several FreeSWITCHes.
@@ -30,6 +30,9 @@ Test cases are release with **OpenSIPS** _version 2.4.5_ and **FreeSWITCH** _ver
 
 * [Malformed packets](#malformed-packets)
 * [Loop protections](#loop-protections)
+
+* [Flooding protection with PIKE](flooding-protection-with-pike)
+
 * [Check 'UA'](#check-ua)
 * [Check 'From' URI](#check-from-uri)
 * [Check 'To' URI](#check-to-uri)
@@ -113,6 +116,16 @@ For this task,you can be used a follow OpenSIPS's function:
 
 ```
 
+### Flooding protection with PIKE
+
+PIKE is sample DoS protection OpenSIPS module.
+
+``` php
+
+```
+opensipsctl fifo pike_list
+
+
 ### Check UA
 
 Can be written in '**route[chk_ua]**'.
@@ -143,13 +156,13 @@ Maybe would like to stop 'OPTIONS' or "MESSAGE" again.
 ### Counter 'no auth'
 
 If you would like to count attempts...
-The idea for this 'route' is gotten by VLAS's presentation.
+The idea for this 'route' is gotten by VLAD's presentation.
 For to use in different places in the config script,
 you can be eritten as route
 
 There is a same route:
 
-``` opensips
+``` php
 route[no_auth_counter]
 {
     if(cache_fetch("redis:group1","authF_$fU",$avp(failed_no))) {
@@ -180,9 +193,9 @@ route[no_auth_counter]
 Something have to get this key word and start droping for this ip address. There will stop attacks !
 You can be used '**fail2ban**' for this task.
 
-For to work '**OpenSIPS**' and '**fail2ban**' together,in the '**opensips.cfg**' have to use follow conteption:
+For to work '**OpenSIPS**' and '**fail2ban**' together,in the '**opensips.cfg**' have to use follow conception:
 
-``` opensips
+``` php
 xlog("L_INFO", "$ci|reject|src_ip=[$si],...your message description...");
 ```
 
@@ -191,16 +204,14 @@ The follow message will be write in the opensips log file:
 1118856626301574502321685|reject|src_ip=[192.168.108.180],... your message description ...
 ```
 
-For to be catch message from the '**fail2ban**',should be create a filter config file for opensips.
-Maybe '**/etc/fail2ban/filter.d/opensips.conf**' for example.After that to define pattern for the catching:
+There is a syntax for '**fail2ban**' rule:
 
 ``` bash
-[Definition]
-
 failregex = \|reject\|src_ip=\[<HOST>\]
 ```
 
-There is a syntax for '**fail2ban**' rule.
+See more information for fail2ban in the [**fail2ban tutarial**](fail2ban.md)
+
 
 ### compression and logrotate a opensips log
 
@@ -208,6 +219,6 @@ There is a syntax for '**fail2ban**' rule.
 
 * [OpenSIPS](https://opensips.org/)
 * [VLAD PAIU,OpenSIPS,Securing SIP Networks](https://opensips.org/pub/events/2012-08-07_ClueCon_Chicago/VLAD_PAIU-OpenSIPS-Securing_SIP_Networks.pdf)
-* [fail2ban](https://github.com/fail2ban/fail2ban)
+* [PIKE](https://opensips.org/html/docs/modules/2.4.x/pike.html)
 
 

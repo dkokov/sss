@@ -8,18 +8,21 @@ links to other projects/publications/books.
 * [Topics](#Topics)
 * [Tools](#Tools)
 * [Tutorials](#Tutorials)
+* [Feedback](#Feedback)
 * [Links](#Links)
 
 ## Introduction
 
-  Have a lot of books and publications in journals for VoIP security.
-But while you don't try some test case with some tool,cannot learn nothing.
-I don't know whether this suite will be useful for somebody,but it's useful for me.
+  Have a lot of books and publications in journals for the VoIP security.
+But while you don't try some case,some tool,cannot learn nothing.
+I don't know whether this suite will be useful for somebody,but it's very useful for me.
+Write while learn as read different materials(web pages,journals,books) and check my VoIP platform.
+It's as travelling.There are my notes from the travelling and would like to share its.
 If you read these sentenses,I'm glad._**Thank you very much!**_
 
 ## Topics
 
-* [Username Enumeration](topics/enum.md)
+* [Enumeration](topics/enum.md)
 * [Password Retrieval](topics/pass.md)
 * [Flooding Attacks](topics/flood.md)
 * [Message Flow Attacks](topics/flow.md)
@@ -27,7 +30,7 @@ If you read these sentenses,I'm glad._**Thank you very much!**_
 
 ## Tools
 
-There are links to own tools - written for me.
+There are links to my own tools.
 
 * [PHP SSS tools](man/tools.md)
 
@@ -35,8 +38,9 @@ For other external tools,see in '**Links**' part by every page.
 
 ## Tutorials
 
-* [Netfilter/iptables tutorial](tutorials/netfilter.md)
+* [Netfilter/iptables SIP tutorial](tutorials/netfilter.md)
 * [OpenSIPS security tutorial](tutorials/opensips.md)
+* [Fail2Ban tutorial](tutorials/fail2ban.md)
 
 ## Feedback
 
@@ -49,7 +53,6 @@ this my personal e-mail address: dkokov75 at gmail dot com
 ## Links
 
 * [SIP - RFC3261](https://tools.ietf.org/html/rfc3261)
-* "HACKING VoIP",HIMANSHU DWIVEDI
 * "SNOCER - A SIP Attack Detection / Prevention Architecture"
 * [Hacking Exposed VoIP, tools](http://www.hackingvoip.com/sec_tools.html)
 * [VoIP - Vulnerabilities and Attacks](https://www.slideshare.net/null0x00/voip-vulnerabilities-and-attacks)
