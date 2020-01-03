@@ -22,11 +22,14 @@ If you read these sentenses,I'm glad._**Thank you very much!**_
 
 ## Topics
 
+* ... soon ...
+
+<!--
 * [Enumeration](topics/enum.md)
 * [Password Retrieval](topics/pass.md)
 * [Flooding Attacks](topics/flood.md)
 * [Message Flow Attacks](topics/flow.md)
-* [Parser Attacks,Fuzzing](topics/parser.md)
+* [Parser Attacks,Fuzzing](topics/parser.md) -->
 
 ## Tools
 
@@ -34,7 +37,7 @@ There are links to my own tools.
 
 * <!--[PHP SSS tools](man/tools.md)--> ... soon ...
 
-For other external tools,see in '**Links**' part by every page.
+<!--For other external tools,see in '**Links**' part by every page.-->
 
 ## Tutorials
 
