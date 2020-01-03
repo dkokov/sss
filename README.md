@@ -38,9 +38,7 @@ For other external tools,see in '**Links**' part by every page.
 
 ## Tutorials
 
-* [Netfilter/iptables SIP tutorial](tutorials/netfilter.md)
-* [OpenSIPS security tutorial](tutorials/opensips.md)
-* [Fail2Ban tutorial](tutorials/fail2ban.md)
+* [OpenSIPS security tutorial (part 1) - Flood attacks](tutorials/opensips-t1.md)
 
 ## Feedback
 
