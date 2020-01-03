@@ -34,7 +34,7 @@ There are links to my own tools.
 
 * <!--[PHP SSS tools](man/tools.md)--> ... soon ...
 
-<!--For other external tools,see in '**Links**' part by every page.-->
+For other external tools,see in '**Links**' part by every page.
 
 ## Tutorials
 
