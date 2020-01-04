@@ -1,9 +1,10 @@
 # Enumeration
 
-* [Enumerating SIP Devices on a Network](enumerating-sip-devices-on-a-network)
-* [Username Enumeration](username-enumeration)
+* [Enumerating SIP Devices on a Network](#enumerating-sip-devices-on-a-network)
+* [Username Enumeration](#username-enumeration)
+* [Links](#Links)
 
-### Enumerating SIP Devices on a Network
+## Enumerating SIP Devices on a Network
 
   Maybe the attacker will make network map with SIP devices/servers in the your network.
 That means to enumerating your network - have or not ane SIP devices/servers.
@@ -12,14 +13,14 @@ For this task can be uses a **NMAP**.
 See example command for UDP scanning to network:
 
 ``` bash
-nmap -sU -p 5060 172.16.0.0/16
+nmap -sU -p 5060 192.168.0.32/27
 ```
 
 See results for this scanning:
 ``` bash
 ...
 
-Nmap scan report for 172.16.0.44
+Nmap scan report for 192.168.0.44
 Host is up (0.0015s latency).
 
 PORT     STATE  SERVICE
@@ -27,14 +28,13 @@ PORT     STATE  SERVICE
 
 ....
 
-
-Nmap scan report for 172.16.0.59
+Nmap scan report for 192.168.0.59
 Host is up (0.0018s latency).
 
 PORT     STATE         SERVICE
 5060/udp open          sip
 
-Nmap scan report for 172.16.0.60
+Nmap scan report for 192.168.0.60
 Host is up (0.0018s latency).
 
 PORT     STATE         SERVICE
@@ -53,7 +53,7 @@ When the result is with STATE '**open**' or '**filtered**' can suppose that have
 See example command for TCP scanning to network:
 
 ``` bash
-nmap -sT -p 5060,5061 172.16.0.11
+nmap -sT -p 5060,5061 192.168.0.11
 ```
 
 See results for this scanning:
@@ -71,7 +71,7 @@ Nmap done: 1 IP address (1 host up) scanned in 0.27 seconds
 ```
 
 
-### Username Enumeration
+## Username Enumeration
 
   Some tools don't need from the previous map,because able to insert directly a network as param.
 Then the tool send SIP messages to several supposing SIP devices and make map after response,if have.
@@ -79,9 +79,9 @@ Then the tool send SIP messages to several supposing SIP devices and make map af
 SIPVicious's tool **svmap.py**' is such.
 
 <!--* Enumerating SIP Usernames with Error Messages.-->
-* [**OPTIONS** Username Enumeration](options-username-enumeration)
-* [**REGISTER** Username Enumeration](register-username-enumeration)
-* [**INVITE**  Username Enumeration](invite-username-enumeration)
+* [**OPTIONS** Username Enumeration](#options-username-enumeration)
+* [**REGISTER** Username Enumeration](#register-username-enumeration)
+* [**INVITE**  Username Enumeration](#invite-username-enumeration)
 <!--* [**NOTIFY**  Username Enumeration](notify-username-enumeration)-->
 
 
@@ -128,7 +128,7 @@ From: "sipvicious" <sip:100@1.1.1.1>;tag=326532663766333631336334013133343636303
 To: "sipvicious" <sip:100@1.1.1.1>;tag=jQ9Z467r94FSm
 Call-ID: 260690755765159327651007
 CSeq: 1 OPTIONS
-Contact: <sip:46.47.127.54>
+Contact: <sip:192.168.11.54>
 User-Agent: FreeSWITCH-mod_sofia/1.6.6~64bit
 Accept: application/sdp
 Allow: INVITE, ACK, BYE, CANCEL, OPTIONS, MESSAGE, INFO, UPDATE, REGISTER, REFER, NOTIFY, PUBLISH, SUBSCRIBE
@@ -213,7 +213,7 @@ If have SIP devices in the network,will be inserted in the list.As this SIP devi
 <!-- #### **NOTIFY** Username Enumeration -->
 
 
-### Links
+## Links
 
 * "HACKING VoIP",HIMANSHU DWIVEDI
 * [Nmap ("Network Mapper")](https://nmap.org/)
