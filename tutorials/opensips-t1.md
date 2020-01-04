@@ -28,10 +28,7 @@ Really this server can do a lot.
 * LAN switch
 
 
-
 ![](sec_lab.png)
-
-![](sip-sec-12122019.png)
 
 
 In this LAB,**OpenSIPS**(host.1) is SIP Router with some SBC functionalities.
@@ -73,7 +70,7 @@ For example ~ 7-8K msg/s. Then **OpenSIPS** cannot response and the service stat
 
 #### TLS SIP msg flooder (Issue #6)
 
-#### SIP fuzzing msg flooder (Issue #7)
+#### SIP parse error/fuzzing msg flooder (Issue #7)
 
   The OpenSIPS don't have problems with fuzzing messages. Don't have crash from this.
 But these messages can be used as flood attacks(DoS) by attacker.
@@ -112,6 +109,8 @@ Therefore,if this case is used as flood,will be have a problem.
 * iptables
 * fail2ban
 * opensips modules and some rules in 'opensips.cfg'
+
+![](sip-sec-02012020.png)
 
 #### Issue #1 prevention - use 'iptables' rules:
 
@@ -234,4 +233,3 @@ failregex = \ERROR\:core\:receive_msg\: Unable to parse msg received from \[<HOS
 * [Fail2Ban MANUAL](https://www.fail2ban.org/wiki/index.php/MANUAL_0_8)
 * [RATELIMIT OpenSIPS module](https://opensips.org/html/docs/modules/2.4.x/ratelimit.html)
 * [PIKE OpenSIPS module](https://opensips.org/html/docs/modules/2.4.x/pike.html)
-* 
