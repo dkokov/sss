@@ -23,6 +23,11 @@ If you read these sentenses,I'm glad._**Thank you very much!**_
 ## Topics
 
 * [Enumeration](topics/enum.md)
+* Password Retrieval **...soon...**
+* Flooding Attacks **...soon...**
+* Message Flow Attacks **...soon...**
+* Parser Attacks,Fuzzing **...soon...**
+
 <!--* [Password Retrieval](topics/pass.md)
 * [Flooding Attacks](topics/flood.md)
 * [Message Flow Attacks](topics/flow.md)
