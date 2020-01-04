@@ -23,10 +23,10 @@ If you read these sentenses,I'm glad._**Thank you very much!**_
 ## Topics
 
 * [Enumeration](topics/enum.md)
-* [Password Retrieval](topics/pass.md)
+<!--* [Password Retrieval](topics/pass.md)
 * [Flooding Attacks](topics/flood.md)
 * [Message Flow Attacks](topics/flow.md)
-* [Parser Attacks,Fuzzing](topics/parser.md)
+* [Parser Attacks,Fuzzing](topics/parser.md)-->
 
 ## Tools
 
